@@ -9,6 +9,7 @@ steps:
   args: [ 'push', 'gcr.io/${PROJECT_ID}/${_SERVICE_NAME}:latest']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
   args:
+    - 'gcloud'
     - 'run'
     - 'deploy'
     - '${_SERVICE_NAME}'
